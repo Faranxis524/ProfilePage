@@ -1,0 +1,39 @@
+/* Home.module.css */
+
+body {
+    background: linear-gradient(135deg, #000000, #151414);
+    background-size: 200% 200%;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  
+  .home-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .home-text {
+    max-width: 50%;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: #fff;
+  }
+  
+  .profile-picture {
+    width: 600px;
+    height: 600px;
+  }
+  

@@ -1,0 +1,500 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #000000, #151414);
+  background-size: 200% 200%; /* Scale up background for smoother transitions */
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  animation: smoothGradient 20s ease infinite; /* Slower and smoother animation */
+}
+
+.page-content,
+.skills-page,
+.contact-page {
+  padding: 40px 20px;
+  text-align: center;
+}
+hr.long-line {
+  margin: 20px auto;
+  height: 2px;
+  background-color: white;
+  width: 60%;
+}
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.home-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: visible; /* Manage overflow if needed */
+}
+
+
+.home-text {
+  max-width: 50%; /* Reduced to make more space for the image */
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.home-text h1 {
+  font-size: 3rem; /* Reduced font size to help fit on one line */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-left: 100px; /* Removed left margin */
+  white-space: nowrap; /* Ensures text stays on one line */
+  overflow: hidden; /* Hide overflow if it occurs */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+.home-text p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  color: #fff;
+}
+
+/* Breadcrumb Navigation Links */
+.nav-links {
+  margin-bottom: 30px;
+  margin-left: 100px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.nav-links a {
+  margin-right: 15px;
+  
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #7fff00;
+}
+
+.nav-links a.active {
+  text-decoration: underline;
+}
+
+.nav-links span {
+  color: #fff;
+  margin: 0 5px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  margin-left: 100px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #7fff00;
+}
+
+/* Profile picture on the right side */
+.profile-picture {
+  width: 600px;
+  height: 600px;
+  animation: slideInRight 1s ease-in-out;
+  margin-left: auto;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Soft shadow for depth */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-picture:hover {
+  transform: scale(1.05) rotate(3deg); /* Slight scale and rotate on hover */
+  box-shadow: 0 12px 40px rgba(127, 255, 0, 0.5); /* Greenish glow shadow on hover */
+}
+
+.profile-picture::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .home-page {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .home-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .home-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-text p {
+    font-size: 1.1rem;
+  }
+
+  .profile-picture {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+  }
+}
+
+/* Animation keyframes (unchanged) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-fade-in {
+  animation: fadeInPage 1s ease-in-out;
+}
+/* About Page Styles */
+.about-page {
+  padding: 90px;
+  overflow-y: auto; /* Enable scrolling for long content */
+}
+
+.upper-left-name {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: dashed;
+}
+
+.nav-links span {
+  color: #fff;
+  margin: 0 5px;
+}
+
+/* Animation for moving upwards */
+.animated-move-up {
+  animation: moveUp 0.8s ease forwards;
+}
+
+@keyframes moveUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section */
+.about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.long-line {
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto 20px auto;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Interests Section */
+.interests-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.interests-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.interest-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.1); /* Gray box with transparency */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.interest-item img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.interest-item p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .interests-list {
+    grid-template-columns: 1fr; /* Stack interests vertically on smaller screens */
+  }
+}
+
+/* Centering the About page content */
+.about-page,
+.skills-page,
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center; /* Center text */
+}
+
+.about-section, .skills-section, .contact-section {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.about-section h1,
+.skills-section h1,
+.contact-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.long-line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin: 10px auto;
+}
+
+.about-description,
+.skills-description,
+.contact-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* General styles */
+.background-black-gradient {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.upper-left-name {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+}
+
+.nav-links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+}
+
+/* Centering the content */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Adjust height so it centers within the view */
+}
+
+/* Specific styles for the pages: About, Skills, Contact */
+.about-section,
+.skills-section,
+.contact-section {
+  width: 60%; /* Adjust width as necessary */
+  text-align: center;
+  color: white;
+}
+
+.about-section h1,
+.skills-section h1,
+.contact-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.long-line {
+  width: 100%;
+  margin: 10px auto;
+  border: 1px solid white;
+}
+
+.about-description,
+.skills-list,
+.contact-section {
+  margin-top: 20px;
+}
+
+/* Home page styles will remain unchanged */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px); /* Adjust based on your header height */
+  width: 100%;
+}
+
+.skills-page,
+.about-page,
+.contact-page {
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.skills-section,
+.about-section,
+.contact-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure the form in the contact page is properly styled */
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.contact-section button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background-color: #0056b3;
+}

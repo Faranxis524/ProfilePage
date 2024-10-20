@@ -1,0 +1,60 @@
+/* About.module.css */
+
+.background-black-gradient {
+    background: linear-gradient(135deg, #000000, #1c1c1c);
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .upper-left-name {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .about-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .about-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .long-line {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto 20px auto;
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .interests-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .interests-section h2 {
+    font-size: 2rem;
+  }
+  
