@@ -1,17 +1,28 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+import Layout from './Layout';
 import './App.css';
 
 function SubmissionSuccess() {
-  const { state } = useLocation(); // Retrieve the form data passed in the navigation
+  const { state } = useLocation();
 
   return (
-    <div className="submission-success">
-      <h1>Thank you, {state?.name}!</h1>
-      <p>Your message has been sent successfully.</p>
-      <p><strong>Email:</strong> {state?.email}</p>
-      <p><strong>Message:</strong> {state?.message}</p>
-    </div>
+    <Layout>
+      <div className="page-content submission-success">
+        <h1>Thank You!</h1>
+        <div className="success-message">
+          <p>Your message has been sent successfully.</p>
+          <p>We appreciate your feedback, {state?.name}!</p>
+        </div>
+        <div className="submission-details">
+          <h2>Submission Details:</h2>
+          <p><strong>Name:</strong> {state?.name}</p>
+          <p><strong>Email:</strong> {state?.email}</p>
+          <p><strong>Message:</strong> {state?.message}</p>
+        </div>
+        <Link to="/" className="back-home-btn">Back to Home</Link>
+      </div>
+    </Layout>
   );
 }
 
