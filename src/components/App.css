@@ -26,7 +26,7 @@ hr.long-line {
   width: 60%;
 }
 .container {
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0px;
 }
@@ -173,7 +173,7 @@ hr.long-line {
   .profile-picture {
     width: 250px;
     height: 250px;
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 
@@ -444,7 +444,7 @@ hr.long-line {
   background-color: rgba(127, 255, 0, 0.1);
   border-left: 4px solid #7fff00;
   margin-left: 600px;
-  color: #fff;
+  
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 4px;
@@ -485,4 +485,105 @@ hr.long-line {
 .back-home-btn:hover {
   
   background-color: #6bdb00;
+}
+/* Mobile responsiveness for screens smaller than 768px */
+@media (max-width: 768px) {
+  body {
+    margin: 20px;
+    padding: 10px;
+    height: auto; /* Allow the body to adjust to the content height */
+  }
+
+  .page-content,
+  .skills-page,
+  .contact-page {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 100%; /* Ensure container fits mobile screen */
+    padding: 0 10px;
+  }
+
+  .home-page {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: auto; /* Adjust height to fit content */
+  }
+
+  .home-text {
+    max-width: 100%; /* Full width for text on mobile */
+    text-align: center; /* Center the text */
+    margin-left: 0;
+  }
+
+  .home-text h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+    margin-left: 0;
+    white-space: normal; /* Allow text to wrap if needed */
+  }
+
+  .home-text p {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack navigation links vertically */
+    margin: 20px auto;
+  }
+
+  .social-icons {
+    justify-content: center; /* Center social icons */
+    margin-left: 0;
+  }
+
+  .profile-picture {
+    width: 200px; /* Smaller profile picture */
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 0; /* Center the profile picture */
+  }
+
+  .about-section,
+  .skills-section,
+  .contact-section {
+    padding: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .about-section h1,
+  .skills-section h1,
+  .contact-section h1 {
+    font-size: 2rem;
+  }
+
+  .interests-section {
+    margin-left: 0;
+  }
+
+  .interests-list {
+    grid-template-columns: 1fr; /* Stack items in a single column */
+    margin-left: 0;
+  }
+
+  .interest-item {
+    width: 100%; /* Full width for interest items */
+    margin-left: 0;
+  }
+
+  .submission-success h1,
+  .success-message,
+  .submission-details,
+  .back-home-btn {
+    margin-left: 0;
+  }
+
+  .back-home-btn {
+    margin: 20px auto; /* Center the button on mobile */
+  }
 }
